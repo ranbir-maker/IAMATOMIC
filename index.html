@@ -1,0 +1,398 @@
+!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IAMATOMIC — Developer Portfolio</title>
+  <!-- SEO basics -->
+  <meta name="description" content="Ranbir — A developer who builds clean, fast, and thoughtful digital experiences.">
+  <!-- Security headers -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <!--note:-the code may be broken somewhere pls ensure to read everything and readme file to move forward-->
+
+<!-- Particle canvas — sits behind the hero as a subtle background effect -->
+  <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+  <!-- Small banner for logged-out visitors -->
+  <div class="user-banner" id="userBanner" style="display:none;">
+    <div class="container banner-inner">
+      <p>&#128640; Want your own portfolio like this? <a href="dashboard.html"><strong>Create Free Account &rarr;</strong></a></p>
+      <button class="banner-close" id="bannerClose" aria-label="Close banner">&times;</button>
+    </div>
+  </div>
+  <!--NAVIGATION AREA -->
+<HEADER CLASS="HEADER" id ="header>
+  <nav class="nav container'>
+  <a href="#home" class="nav__logo">
+<span class="logo-dot"></span> <span id="navBrand">IAMATOMIC</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dashboard link — shown if logged in -->
+        <a href="dashboard.html" class="nav-dashboard-link" id="dashboardLink" style="display:none;">
+          Dashboard
+        </a>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon-sun">&#9728;</span>
+          <span class="theme-icon-moon">&#9790;</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!--HERO SECTION-->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div class="hero-content reveal">
+      <span class="status-badge">
+          <span class="status-dot"></span> <span id="heroStatus">Available for Projects</span>
+        </span>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text" id="heroName">IAMATOMIC</span>
+          <span class="typing-cursor">|</span>
+        </h1>
+        <p class="hero-subtitle" id="heroBio">
+          I build clean, fast, and thoughtful digital experiences.
+          Turning ideas into real products — one line of code at a time.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary ripple">View My Work</a>
+          <a href="#contact" class="btn btn-outline ripple">Contact Me</a>
+        </div>
+
+        <div class="hero-socials" id="heroSocials">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">GitHub &#8599;</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn &#8599;</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">Twitter &#8599;</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-1">
+        <div class="code-card float-animation">
+          <div class="code-card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-filename">about-me.js</span>
+          </div>
+          <pre class="code-card-body"><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-key">name</span>: <span class="code-string" id="codeName">"IAMATOMIC"</span>,
+  <span class="code-key">role</span>: <span class="code-string" id="codeRole">"Full-Stack Dev"</span>,
+  <span class="code-key">loves</span>: [<span class="code-string">"clean code"</span>,
+          <span class="code-string">"good design"</span>,
+          <span class="code-string">"solving problems"</span>],
+  <span class="code-key">coffee</span>: <span class="code-boolean">true</span>,
+};
+
+<span class="code-keyword">export default</span> developer;</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    </div>
+<!-- =================== ABOUT =================== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <span class="section-tag reveal">Who I Am</span>
+      <h2 class="section-title reveal">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal" id="aboutText">
+          <p>
+            Hey! I'm a developer who genuinely enjoys building things for the web.
+            I started coding out of curiosity — and now it's pretty much how I think.
+          </p>
+          <p>
+            I care about writing code that's easy to read, easy to maintain, and actually
+            solves real problems. Whether it's a landing page, a full-stack app, or a
+            small tool — I try to make it feel right.
+          </p>
+          <p>
+            When I'm not coding, I'm probably learning something new, exploring open source,
+            or overthinking my VS Code theme.
+          </p>
+        </div>
+
+        <div class="about-stats reveal-stagger" id="statsContainer">
+          <div class="stat-card">
+            <span class="stat-number" data-count="15">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="2">0</span>
+            <span class="stat-label">Years Coding</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="500">0</span>
+            <span class="stat-label">Cups of Coffee</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number stat-infinity">&infin;</span>
+            <span class="stat-label">Things to Learn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SKILLS =================== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <span class="section-tag reveal">What I Work With</span>
+      <h2 class="section-title reveal">Skills & Tools</h2>
+
+      <div class="skills-grid reveal-stagger" id="skillsContainer">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">TypeScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Tools & Other</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Vercel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PROJECTS =================== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <span class="section-tag reveal">Things I've Built</span>
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="project-filters reveal" id="projectFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web-app">Web Apps</button>
+        <button class="filter-btn" data-filter="ui-ux">UI / UX</button>
+        <button class="filter-btn" data-filter="tool">Tools</button>
+      </div>
+
+      <div class="projects-grid" id="projectsContainer">
+        <!-- Project 1 -->
+        <article class="project-card tilt-card reveal-stagger-item" data-category="web-app">
+          <div class="project-banner banner-gradient-1">
+            <span class="project-banner-icon">&#128203;</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">TaskFlow</h3>
+            <p class="project-desc">A clean project management app with drag-and-drop boards, task deadlines, and team collaboration features.</p>
+            <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card tilt-card reveal-stagger-item" data-category="ui-ux">
+          <div class="project-banner banner-gradient-2">
+            <span class="project-banner-icon">&#127912;</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">PixelCraft</h3>
+            <p class="project-desc">A minimal design system with reusable UI components, color tokens, and spacing guidelines for faster prototyping.</p>
+            <div class="project-tags"><span>Figma</span><span>CSS</span><span>Storybook</span></div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card tilt-card reveal-stagger-item" data-category="tool">
+          <div class="project-banner banner-gradient-3">
+            <span class="project-banner-icon">&#9729;</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">CloudSync</h3>
+            <p class="project-desc">A lightweight file sync tool that keeps your local and cloud folders in perfect harmony with real-time updates.</p>
+            <div class="project-tags"><span>Python</span><span>AWS S3</span><span>CLI</span></div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card tilt-card reveal-stagger-item" data-category="web-app">
+          <div class="project-banner banner-gradient-4">
+            <span class="project-banner-icon">&#128172;</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">ChatNest</h3>
+            <p class="project-desc">A real-time chat application with rooms, typing indicators, and message reactions — built with WebSockets.</p>
+            <div class="project-tags"><span>React</span><span>Socket.io</span><span>Express</span></div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card tilt-card reveal-stagger-item" data-category="tool">
+          <div class="project-banner banner-gradient-5">
+            <span class="project-banner-icon">&#128187;</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">SnippetVault</h3>
+            <p class="project-desc">A personal code snippet manager with syntax highlighting, search, tags, and one-click copy to clipboard.</p>
+            <div class="project-tags"><span>JavaScript</span><span>LocalStorage</span><span>CSS</span></div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card tilt-card reveal-stagger-item" data-category="ui-ux">
+          <div class="project-banner banner-gradient-6">
+            <span class="project-banner-icon">&#127763;</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">WeatherLens</h3>
+            <p class="project-desc">A beautiful weather dashboard with animated backgrounds that change based on current conditions and time of day.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>Weather API</span></div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== CONTACT =================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <span class="section-tag reveal">Let's Talk</span>
+      <h2 class="section-title reveal">Get In Touch</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-stagger" id="contactInfoContainer">
+          <div class="contact-card">
+            <span class="contact-icon">&#9993;</span>
+            <div><h4>Email</h4><p id="contactEmail">hello@iamatomic.dev</p></div>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">&#128205;</span>
+            <div><h4>Location</h4><p id="contactLocation">India</p></div>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">&#128279;</span>
+            <div><h4>GitHub</h4>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" id="contactGithub">github.com/iamatomic</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">&#128101;</span>
+            <div><h4>LinkedIn</h4>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id="contactLinkedin">linkedin.com/in/iamatomic</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <!-- Honeypot — hidden from real users -->
+          <div class="honey-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required maxlength="100" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required maxlength="200" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required maxlength="200">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Hey, I'd love to work together on..." required maxlength="2000"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit ripple" id="submitBtn">Send Message</button>
+          <p class="form-feedback success" id="formSuccess">&#10003; Message sent! I'll get back to you soon.</p>
+          <p class="form-feedback error" id="formError">&#10007; Please fill all fields correctly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 <strong id="footerBrand">IAMATOMIC</strong>. Built with care, coffee, and clean code.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">&#8593; Top</a>
+    </div>
+  </footer>
+
+  <!-- Scripts — auth first, then portfolio logic -->
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+  
