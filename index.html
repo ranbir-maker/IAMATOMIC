@@ -1,41 +1,36 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IAMATOMIC — Developer Portfolio</title>
+
   <!-- SEO basics -->
-  <meta name="description" content="Ranbir — A developer who builds clean, fast, and thoughtful digital experiences.">
+  <meta name="description" content="IAMATOMIC — A developer who builds clean, fast, and thoughtful digital experiences.">
+
   <!-- Security headers -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- Fonts -->
+
+  <!-- Fonts — friendly and human -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
-
-
 <body>
-  <!--note:-the code may be broken somewhere pls ensure to read everything and readme file to move forward-->
 
-<!-- Particle canvas — sits behind the hero as a subtle background effect -->
+  <!-- Particle canvas — sits behind the hero as a subtle background effect -->
   <canvas id="particleCanvas" class="particle-canvas"></canvas>
 
-  <!-- Small banner for logged-out visitors -->
-  <div class="user-banner" id="userBanner" style="display:none;">
-    <div class="container banner-inner">
-      <p>&#128640; Want your own portfolio like this? <a href="dashboard.html"><strong>Create Free Account &rarr;</strong></a></p>
-      <button class="banner-close" id="bannerClose" aria-label="Close banner">&times;</button>
-    </div>
-  </div>
-  <!--NAVIGATION AREA -->
-<HEADER CLASS="HEADER" id ="header>
-  <nav class="nav container'>
-  <a href="#home" class="nav__logo">
-<span class="logo-dot"></span> <span id="navBrand">IAMATOMIC</span>
+
+  <!-- =================== NAVIGATION =================== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-dot"></span> <span id="navBrand">IAMATOMIC</span>
       </a>
 
       <ul class="nav-links" id="navLinks">
@@ -52,11 +47,6 @@
           Dashboard
         </a>
 
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <span class="theme-icon-sun">&#9728;</span>
-          <span class="theme-icon-moon">&#9790;</span>
-        </button>
-
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -66,12 +56,12 @@
     </nav>
   </header>
 
-  <!--HERO SECTION-->
+  <!-- =================== HERO =================== -->
   <section class="hero" id="home">
     <div class="container hero-grid">
 
       <div class="hero-content reveal">
-      <span class="status-badge">
+        <span class="status-badge">
           <span class="status-dot"></span> <span id="heroStatus">Available for Projects</span>
         </span>
 
@@ -119,8 +109,7 @@
     </div>
   </section>
 
-    </div>
-<!-- =================== ABOUT =================== -->
+  <!-- =================== ABOUT =================== -->
   <section class="about section" id="about">
     <div class="container">
       <span class="section-tag reveal">Who I Am</span>
@@ -195,14 +184,14 @@
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group-title">Tools & Other</h3>
+          <h3 class="skill-group-title">Hardware & Tools</h3>
           <div class="skill-tags">
+            <span class="skill-tag">Arduino IDE</span>
+            <span class="skill-tag">Robotics & IoT</span>
             <span class="skill-tag">Git & GitHub</span>
             <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">Figma</span>
             <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Figma</span>
           </div>
         </div>
       </div>
@@ -217,105 +206,56 @@
 
       <div class="project-filters reveal" id="projectFilters">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web-app">Web Apps</button>
-        <button class="filter-btn" data-filter="ui-ux">UI / UX</button>
-        <button class="filter-btn" data-filter="tool">Tools</button>
+        <button class="filter-btn" data-filter="web-app">Web & Games</button>
+        <button class="filter-btn" data-filter="hardware">Hardware & Robotics</button>
       </div>
 
       <div class="projects-grid" id="projectsContainer">
         <!-- Project 1 -->
-        <article class="project-card tilt-card reveal-stagger-item" data-category="web-app">
-          <div class="project-banner banner-gradient-1">
-            <span class="project-banner-icon">&#128203;</span>
+        <article class="project-card tilt-card reveal-stagger-item" data-category="hardware">
+          <div class="project-banner">
+            <img src="images/motion-detector-car.jpg" alt="Motion Detector Car" class="project-banner-img">
           </div>
           <div class="project-info">
-            <h3 class="project-title">TaskFlow</h3>
-            <p class="project-desc">A clean project management app with drag-and-drop boards, task deadlines, and team collaboration features.</p>
-            <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
-            </div>
+            <h3 class="project-title">Motion Detector Car</h3>
+            <p class="project-desc">An autonomous obstacle-avoiding smart car built with ultrasonic sensors, servo steering, and DC gear motors.<br>Programmed in Arduino (C++) to detect real-time motion and navigate paths automatically.</p>
+            <div class="project-tags"><span>Arduino</span><span>C++</span><span>Ultrasonic Sensor</span><span>Robotics</span></div>
           </div>
         </article>
 
         <!-- Project 2 -->
-        <article class="project-card tilt-card reveal-stagger-item" data-category="ui-ux">
-          <div class="project-banner banner-gradient-2">
-            <span class="project-banner-icon">&#127912;</span>
+        <article class="project-card tilt-card reveal-stagger-item" data-category="web-app">
+          <div class="project-banner">
+            <img src="images/suraksha-simulator.png" alt="Suraksha" class="project-banner-img">
           </div>
           <div class="project-info">
-            <h3 class="project-title">PixelCraft</h3>
-            <p class="project-desc">A minimal design system with reusable UI components, color tokens, and spacing guidelines for faster prototyping.</p>
-            <div class="project-tags"><span>Figma</span><span>CSS</span><span>Storybook</span></div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
-            </div>
+            <h3 class="project-title">Suraksha</h3>
+            <p class="project-desc">A tactical emergency preparedness simulator designed to build disaster survival reflexes through interactive crisis missions.<br>Features high-stakes scenarios (fire evacuation, seismic tremors, flash floods), a 3D campus explorer, and AI safety assessments.</p>
+            <div class="project-tags"><span>CSS</span><span>JS</span><span>AI</span></div>
           </div>
         </article>
 
         <!-- Project 3 -->
-        <article class="project-card tilt-card reveal-stagger-item" data-category="tool">
-          <div class="project-banner banner-gradient-3">
-            <span class="project-banner-icon">&#9729;</span>
+        <article class="project-card tilt-card reveal-stagger-item" data-category="hardware">
+          <div class="project-banner">
+            <img src="images/fpv-drone.jpg" alt="FPV Drone" class="project-banner-img">
           </div>
           <div class="project-info">
-            <h3 class="project-title">CloudSync</h3>
-            <p class="project-desc">A lightweight file sync tool that keeps your local and cloud folders in perfect harmony with real-time updates.</p>
-            <div class="project-tags"><span>Python</span><span>AWS S3</span><span>CLI</span></div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
-            </div>
+            <h3 class="project-title">FPV Drone</h3>
+            <p class="project-desc">A custom-built micro FPV quadcopter engineered with an onboard camera and video transmitter for low-latency piloting.<br>Features a lightweight chassis, high-RPM motors, and tuned flight stabilization for agile aerial maneuvers.</p>
+            <div class="project-tags"><span>Hardware</span><span>FPV</span><span>Robotics</span><span>Aeronautics</span></div>
           </div>
         </article>
 
         <!-- Project 4 -->
         <article class="project-card tilt-card reveal-stagger-item" data-category="web-app">
-          <div class="project-banner banner-gradient-4">
-            <span class="project-banner-icon">&#128172;</span>
+          <div class="project-banner">
+            <img src="images/trap-trek.png" alt="Trap Trek" class="project-banner-img">
           </div>
           <div class="project-info">
-            <h3 class="project-title">ChatNest</h3>
-            <p class="project-desc">A real-time chat application with rooms, typing indicators, and message reactions — built with WebSockets.</p>
-            <div class="project-tags"><span>React</span><span>Socket.io</span><span>Express</span></div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 5 -->
-        <article class="project-card tilt-card reveal-stagger-item" data-category="tool">
-          <div class="project-banner banner-gradient-5">
-            <span class="project-banner-icon">&#128187;</span>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">SnippetVault</h3>
-            <p class="project-desc">A personal code snippet manager with syntax highlighting, search, tags, and one-click copy to clipboard.</p>
-            <div class="project-tags"><span>JavaScript</span><span>LocalStorage</span><span>CSS</span></div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 6 -->
-        <article class="project-card tilt-card reveal-stagger-item" data-category="ui-ux">
-          <div class="project-banner banner-gradient-6">
-            <span class="project-banner-icon">&#127763;</span>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">WeatherLens</h3>
-            <p class="project-desc">A beautiful weather dashboard with animated backgrounds that change based on current conditions and time of day.</p>
-            <div class="project-tags"><span>HTML</span><span>CSS</span><span>Weather API</span></div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">Source Code &#8599;</a>
-            </div>
+            <h3 class="project-title">Trap Trek</h3>
+            <p class="project-desc">A deceptive 2D platform adventure featuring 50 tricky levels across 5 distinct worlds with unpredictable hazards.<br>Overcome crumbly floors, surprise spike traps, and troll-style physics puzzles where even the exit door is lying!</p>
+            <div class="project-tags"><span>JavaScript</span><span>HTML5 Canvas</span><span>Game Dev</span><span>CSS</span></div>
           </div>
         </article>
       </div>
@@ -331,23 +271,19 @@
       <div class="contact-grid">
         <div class="contact-info reveal-stagger" id="contactInfoContainer">
           <div class="contact-card">
-            <span class="contact-icon">&#9993;</span>
-            <div><h4>Email</h4><p id="contactEmail">hello@iamatomic.dev</p></div>
-          </div>
-          <div class="contact-card">
             <span class="contact-icon">&#128205;</span>
             <div><h4>Location</h4><p id="contactLocation">India</p></div>
           </div>
           <div class="contact-card">
             <span class="contact-icon">&#128279;</span>
             <div><h4>GitHub</h4>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" id="contactGithub">github.com/iamatomic</a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" id="contactGithub">github.com/your-username</a>
             </div>
           </div>
           <div class="contact-card">
             <span class="contact-icon">&#128101;</span>
             <div><h4>LinkedIn</h4>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id="contactLinkedin">linkedin.com/in/iamatomic</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id="contactLinkedin">linkedin.com/in/your-username</a>
             </div>
           </div>
         </div>
@@ -395,4 +331,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-  
