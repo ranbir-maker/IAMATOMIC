@@ -1,10 +1,4 @@
-/* ============================================================
-   IAMATOMIC — Portfolio Styles
-   Warm, human color palette  |  Clean readable fonts
-   Dynamic animations         |  Dark & Light themes
-   ============================================================ */
-
-/* ---------- CSS Variables (Dark theme = default) ---------- */
+/*  CSS Variables */
 :root {
   --accent:          #e8825c;
   --accent-hover:    #d9714b;
