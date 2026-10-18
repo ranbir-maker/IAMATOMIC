@@ -204,7 +204,7 @@ input, textarea { font-family: inherit; font-size: inherit; }
 .reveal-delay-2 { transition-delay: 0.3s; }
 .reveal-delay-3 { transition-delay: 0.45s; }
 
-/* Staggered children — each child animates one by one */
+/* Staggered children —  */
 .reveal-stagger > * {
   opacity: 0;
   transform: translateY(25px);
@@ -234,7 +234,7 @@ input, textarea { font-family: inherit; font-size: inherit; }
 
 
 /* ============================================================
-   GRADIENT TEXT (animated color shift on the name)
+   GRADIENT TEXT 
    ============================================================ */
 .gradient-text {
   background: linear-gradient(135deg, #e8825c, #f4a261, #e8825c, #f4a261);
@@ -268,7 +268,7 @@ input, textarea { font-family: inherit; font-size: inherit; }
 
 
 /* ============================================================
-   FLOATING ANIMATION (code card gently bobs up and down)
+   FLOATING ANIMATION 
    ============================================================ */
 .float-animation {
   animation: floatUp 5s ease-in-out infinite;
@@ -281,7 +281,7 @@ input, textarea { font-family: inherit; font-size: inherit; }
 
 
 /* ============================================================
-   RIPPLE EFFECT (on button click)
+   RIPPLE EFFECT 
    ============================================================ */
 .ripple {
   position: relative;
@@ -303,7 +303,7 @@ input, textarea { font-family: inherit; font-size: inherit; }
 
 
 /* ============================================================
-   3D TILT (project cards follow mouse)
+   3D TILT 
    ============================================================ */
 .tilt-card {
   transform-style: preserve-3d;
