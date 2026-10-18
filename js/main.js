@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const allNavLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
-  // Populate dynamic profile data if user is logged in
+  
   loadUserPortfolio();
 
-  // Mobile menu
+// Mobile menu
   if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenuBtn.classList.toggle('open');
